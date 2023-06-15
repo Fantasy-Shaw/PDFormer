@@ -35,7 +35,7 @@ class IncrementalDataGenerator():
         geo = copy.deepcopy(self.fullGeo)
         # Should be as follows, while geo["geo_id"] as geo.index.
         geo.drop(geo[(geo.index < self.startSensorIdx) | (geo.index > self.endSensorIdx)].index, inplace=True)
-        geo.to_csv(os.path.join(self.outPutDir, "geo.csv"), index=False)
+        geo.to_csv(os.path.join(self.outPutDir, "geo.csv"), index=True)
         rel = copy.deepcopy(self.fullRel)
         rel.drop(rel[(rel.origin_id < self.startSensorIdx) | (rel.origin_id > self.endSensorIdx) |
                      (rel.destination_id < self.startSensorIdx) | (rel.destination_id > self.endSensorIdx)].index,
