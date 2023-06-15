@@ -52,10 +52,10 @@ class IncrementalDataGenerator():
         baseIndices = list(set(random.sample(range(len(self.fullGeo)), self.rdShuffleLength)))
         print(len(baseIndices), baseIndices)
         dyna = copy.deepcopy(self.fullDyna)
-        # dyna.drop([i for i, x in enumerate(dyna.entity_id) if x not in baseIndices], inplace=True)
-        # dyna = dyna.reset_index()
-        # dyna["dyna_id"] = dyna.index
-        # dyna.to_csv(os.path.join(self.outPutDir, "dyna.csv"), index=False)
+        dyna.drop([i for i, x in enumerate(dyna.entity_id) if x not in baseIndices], inplace=True)
+        dyna = dyna.reset_index()
+        dyna["dyna_id"] = dyna.index
+        dyna.to_csv(os.path.join(self.outPutDir, "dyna.csv"), index=False)
         geo = copy.deepcopy(self.fullGeo)
         # Should be as follows, while geo["geo_id"] as geo.index.
         geo.drop([i for i, x in enumerate(geo.index) if x not in baseIndices], inplace=True)
