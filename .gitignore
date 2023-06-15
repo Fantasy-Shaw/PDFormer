@@ -10,3 +10,12 @@
 /libcity/data/dataset/*/__pycache__
 /libcity/cache/model_cache/*
 /libcity/cache/evaluate_cache/*
+/raw_data/CHIBike/
+/raw_data/NYCTaxi/
+/raw_data/PeMS04/
+/raw_data/PeMS07/
+/raw_data/PeMS07Lite/
+/raw_data/PeMS07Lite65/
+/raw_data/PeMS08/
+/raw_data/PeMSD7M/
+/raw_data/T-Drive/
