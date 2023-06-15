@@ -59,7 +59,7 @@ class IncrementalDataGenerator():
         geo = copy.deepcopy(self.fullGeo)
         # Should be as follows, while geo["geo_id"] as geo.index.
         geo.drop([i for i, x in enumerate(geo.index) if x not in baseIndices], inplace=True)
-        geo.to_csv(os.path.join(self.outPutDir, "geo.csv"), index=False)
+        geo.to_csv(os.path.join(self.outPutDir, "geo.csv"), index=True)
         rel = copy.deepcopy(self.fullRel)
         rel.drop([i for i, x in enumerate(zip(rel.origin_id, rel.destination_id)) if
                   (x[0] not in baseIndices) or (x[1] not in baseIndices)], inplace=True)
