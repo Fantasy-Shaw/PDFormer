@@ -8,7 +8,7 @@ import gc
 import copy
 
 
-class IncrementalDataGenerator():
+class IncrementalDataGenerator:
     def __init__(self):
         self.fullDynaFile: str = os.path.join("..", r"raw_data\PeMS07\PeMS07.dyna")
         self.fullGeoFile: str = os.path.join("..", r"raw_data\PeMS07\PeMS07.geo")
